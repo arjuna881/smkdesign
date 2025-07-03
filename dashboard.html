@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard SMK</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200">
+
+  <!-- Top Navbar -->
+  <header class="bg-blue-600 text-white p-4 flex justify-between items-center shadow">
+    <h1 class=" relative text-xl font-bold">SMK Kreatif</h1>
+    <div class="absolute top right-0 p-2 rounded-xl bg-red-600 grid cursor-pointer transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-12">
+      <button onclick="document.getElementById('email-info').classList.toggle('hidden')" class="text-sm text-gray-50 col-start-1 row-start-1 appearance-none transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-12 hover: ">Email | SMK Kreatif</button>
+      <p id="email-info" class="  justify-center hidden text-black font-bold">
+    smkkreatif@gmail.com
+  </p>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div class="">
+
+    <!-- Sidebar -->
+  <div class="sticky top-0 z-50 bg-gray-100 p-2">
+  <select 
+    onchange="if(this.value) location.href=this.value;" 
+    class="rounded-lg text-center font-mono appearance-none bg-gray-50 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-blue-50 w-full max-w-xs shadow-xl"
+  >
+    <option value="" selected disabled>Pilih Halaman</option>
+    <option value="dashboard.html">Profil</option>
+    <option value="jurusan.html">Jurusan</option>
+    <option value="ppdb.html">Pendaftaran Siswa</option>
+    <option value="prestasi.html">Prestasi</option>
+    
+  </select>
+</div>
+
+
+    <!-- Main Content -->
+    <main class=" p-6">
+        
+      <h2 class="text-4xl shadow-md mb-4 font-bold text-center p-5  bg-white">About SMK Kreatif</h2>
+      <img src="smk-logo-image_9041275.png" class="w-50 h-32/">
+
+      <p class="text-gray-700 pb-20 font-mono">
+        
+     <br><br>
+    Melalui sistem ini, pengguna seperti guru, siswa, dan pihak manajemen sekolah dapat dengan mudah memantau dan memperbarui data sekolah secara real-time. Dengan navigasi yang sederhana dan tampilan yang informatif, dashboard ini tidak hanya membantu transparansi informasi, tetapi juga mendukung upaya digitalisasi pendidikan di lingkungan sekolah.
+    <br><br>
+    Diharapkan dengan hadirnya dashboard ini, seluruh civitas akademika dapat bekerja sama menjaga kualitas data, mempromosikan pencapaian sekolah, dan menciptakan ekosistem pendidikan yang lebih modern, responsif, dan terstruktur. Silakan manfaatkan semua menu yang tersedia untuk eksplorasi lebih lanjut. Jika Anda adalah admin, Anda juga dapat menambahkan konten baru, memperbarui data lama, atau mengunggah dokumentasi terbaru seputar kegiatan sekolah.
+    <br><br>
+    Dashboard ini dirancang sebagai pusat informasi terintegrasi yang mendukung digitalisasi sistem manajemen sekolah. Melalui antarmuka yang intuitif dan ramah pengguna, dashboard ini memungkinkan seluruh stakeholder—termasuk guru, siswa, tenaga kependidikan, hingga pimpinan sekolah—untuk memantau perkembangan data secara real-time. Mulai dari informasi akademik, prestasi siswa, jadwal kegiatan, dokumentasi sekolah, hingga profil jurusan, semuanya disajikan secara sistematis dan mudah diakses.
+
+Sistem ini juga mendukung efisiensi administrasi. Guru dapat mengunggah atau memperbarui informasi pembelajaran dan kegiatan kelas, sedangkan pihak manajemen dapat menyusun laporan perkembangan sekolah secara berkala. Bagi siswa, dashboard ini menjadi sumber informasi terpercaya yang dapat diakses kapan pun dibutuhkan, tanpa bergantung pada komunikasi manual.
+
+Melalui fitur navigasi yang sederhana dan informatif, diharapkan setiap pengguna dapat menjelajahi berbagai menu seperti profil sekolah, visi misi, jurusan, prestasi, dan galeri dokumentasi. Bagi admin, tersedia fitur tambahan untuk mengedit konten, mengunggah data terbaru, serta memastikan informasi yang tersaji tetap akurat dan relevan.
+
+Dengan adanya dashboard ini, SMK tidak hanya mengikuti arus digitalisasi, tetapi juga menunjukkan komitmen untuk menciptakan lingkungan belajar yang transparan, adaptif, dan selaras dengan kebutuhan zaman. Mari manfaatkan fitur yang tersedia untuk membangun ekosistem pendidikan yang lebih modern dan kolaboratif.
+    </p>
+
+ <div class="relative p-10 bg-green-100 shadow-lg text-center max-w-2xl mx-auto">
+  <h3 class="text-xl font-bold mb-4">Visi & Misi</h3>
+  <p id="visiMisiText" class="text-gray-800 text-lg italic">
+    "Menjadi sekolah kejuruan unggulan yang kreatif, inovatif, dan berdaya saing global dalam bidang teknologi dan industri kreatif."
+  </p>
+
+  <div class="  flex justify-center gap-5 mt-6">
+    <button onclick="prevSlide()" class="  absolute  -left-0 top-1/2 -translate-y-1/2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition delay-150 duration-300 ease-in-out hover:-translate-x-1 hover:scale-110 hover:rounded-xl ">←</button>
+    <button onclick="nextSlide()" class="  absolute  -right-0 top-1/2 -translate-y-1/2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition delay-150 duration-300 ease-in-out hover:-translate-x-1 hover:scale-110 hover:rounded-xl">→</button>
+  </div>
+</div>
+
+<script>
+  const visiMisiList = [
+    `"Menjadi sekolah kejuruan unggulan yang kreatif, inovatif, dan berdaya saing global dalam bidang teknologi dan industri kreatif."`,
+    `"Menyelenggarakan pendidikan berbasis teknologi dan kewirausahaan."`,
+    `"Membentuk lulusan yang kompeten, mandiri, dan berakhlak mulia."`,
+    `"Menjalin kerja sama dengan dunia industri untuk penyaluran lulusan."`,
+    `"Meningkatkan profesionalisme tenaga pendidik dan fasilitas sekolah."`
+  ];
+
+  let index = 0;
+
+  function showVisiMisi(i) {
+    document.getElementById("visiMisiText").textContent = visiMisiList[i];
+  }
+
+  function prevSlide() {
+    index = (index - 1 + visiMisiList.length) % visiMisiList.length;
+    showVisiMisi(index);
+  }
+
+  function nextSlide() {
+    index = (index + 1) % visiMisiList.length;
+    showVisiMisi(index);
+  }
+</script>
+
+
+      <div class="flex justify-between ">
+    <div class="  bg-slate-300 hover:cursor-pointer shadow-lg p-10  m-10 w-1/2 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 hover:rounded-xl rounded-xl"><a href="rpl.html">
+      <h4 class="font-bold text-black-500"> Rekayasa Perangkat Lunak (RPL)</h4>
+      <p class="text-sm text-black-1000">
+        Fokus pada pengembangan aplikasi desktop, web, dan mobile, termasuk pembelajaran coding, database, dan UI/UX.
+      </p>
+      </a>
+    </div>
+
+    <div class=" bg-slate-300 hover:cursor-pointer shadow-lg p-10 m-10 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 hover:rounded-xl rounded-xl"><a href="tkj.html">
+      <h4 class="font-bold text-black-500"> Teknik Komputer dan Jaringan (TKJ)</h4>
+      <p class="text-sm text-black-1000">
+        Mengajarkan perakitan komputer, instalasi jaringan, dan pemeliharaan infrastruktur jaringan komputer.
+      </p>
+      </a>
+    </div>
+
+    <div class=" bg-slate-300 hover:cursor-pointer shadow-lg p-10 m-10 w-2/1 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 hover:rounded-xl rounded-xl "><a href="multimedia.html">
+      <h4 class="font-bold text-black-500"> Multimedia (MM)</h4>
+      <p class="text-sm text-black-1000">
+        Siswa belajar membuat konten visual, animasi, video editing, serta penggunaan software desain.
+      </p>
+      </a>
+    </div>
+  </div>
+
+  <p class="text-gray-700 pb-20 font-mono">
+        
+     <br><br>
+    Apa Itu Jurusan di SMK?
+Di SMK (Sekolah Menengah Kejuruan), jurusan adalah program keahlian yang menentukan spesialisasi siswa. Setiap jurusan difokuskan untuk mengembangkan keterampilan kerja, sehingga saat lulus siswa siap terjun ke dunia industri atau bahkan berwirausaha.
+    <br><br>
+    Teknik Komputer dan Jaringan (TKJ)
+Cocok buat kamu yang suka bongkar pasang komputer, jaringan internet, dan sistem server.
+
+Yang dipelajari:
+
+Perakitan dan perawatan komputer
+
+Instalasi jaringan LAN, WAN, WiFi
+
+Sistem operasi (Linux, Windows, Server)
+
+Routing, subnetting, dan pengamanan jaringan
+
+Penggunaan Mikrotik dan Cisco
+
+Remote access dan virtualisasi
+
+Peluang kerja:
+
+Network Administrator, IT Support, Server Engineer, System Administrator, teknisi komputer
+
+Keunggulan:
+TKJ mengajarkan siswa untuk menjadi tulang punggung infrastruktur IT.
+
+<img src="HBYWw5xj1C.jpg" class="w-50 h-32/">
+
+    <br><br>
+    Multimedia
+Buat kamu yang suka desain, video, animasi, dan karya visual kreatif.
+
+Yang dipelajari:
+
+Desain grafis (Photoshop, Illustrator, CorelDRAW)
+
+Video editing (Premiere Pro, After Effects)
+
+Fotografi & videografi
+
+Animasi 2D/3D
+
+Audio editing & podcasting
+
+Web design & media interaktif
+
+Peluang kerja:
+
+Desainer grafis, Editor video, Animator, Content Creator, YouTuber, Creative Agency
+
+Keunggulan:
+Multimedia membuka jalan ke dunia industri kreatif yang terus berkembang.
+
+
+    </p>
+
+  <div class=" mb-10 bg-gradient-to-r from-green-300 via-blue-200 to-purple-300 text-center py-10 px-6 rounded-xl shadow-lg max-w-3xl mx-auto mt-10">
+    <h4 class="text-center font-serif">quotes of the day</h4>
+  <p id="quoteText" class="text-2xl md:text-3xl font-semibold text-gray-800 italic leading-relaxed transition duration-500">
+    “Pendidikan bukan hanya tentang lulus dan nilai, tapi tentang tumbuh, mencoba, dan menjadi versi terbaik dari dirimu.”
+  </p>
+  <span class="block mt-4 text-sm text-gray-700 font-medium">— SMK Kreatif</span>
+</div>
+
+<script>
+  const quotes = [
+    "“Pendidikan bukan hanya tentang lulus dan nilai, tapi tentang tumbuh, mencoba, dan menjadi versi terbaik dari dirimu.”",
+    "“Belajar adalah jembatan antara impian dan kenyataan. Setiap langkahmu berarti.”",
+    "“Sekolah bukan tempat menghafal, tapi tempat menemukan jati diri dan potensi.”",
+    "“Gagal itu biasa. Bangkit lagi itulah tanda belajar yang sebenarnya.”",
+    "“Kreativitas adalah mata pelajaran paling penting yang tak tertulis di buku pelajaran.”"
+  ];
+
+  
+
+  setInterval(() => {
+    index = (index + 1) % quotes.length;
+    document.getElementById("quoteText").textContent = quotes[index];
+  }, 5000);
+</script>
+
+ 
+  <div class="p-10 bg-gray-50 shadow-inherit">
+    <table class="w-full text-center bg-red-50 p-4 border border-gray-300">
+  <caption class="caption-top mt-2 text-xl text-black font-bold mb-1">
+    Identitas Sekolah
+  </caption>
+  <thead class="">
+    <tr>
+      <td class="border p-2">Nama Sekolah</td>
+      <td class="border p-2 w-0">:</td>
+      <td class="border p-2">SMK Kreatif Bogor</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border p-2">NPSN:</td>
+      <td class="border p-2 w-0">:</td>
+      <td class="border p-2">1234567890</td>
+    </tr>
+    <tr>
+      <td class="border p-2">Alamat:</td>
+      <td class="border p-2 w-0">:</td>
+      <td class="border p-2">Jl. Baru No.123, Gunung putri, Kota Bogor, Jawa Barat 16412</td>
+    </tr>
+    <tr>
+      <td class="border p-2">Akreditasi:</td>
+      <td class="border p-2 w-0">:</td>
+      <td class="border p-2">A-</td>
+    </tr>
+    <tr>
+      <td class="border p-2">Luas Tanah:</td>
+      <td class="border p-2 w-0">:</td>
+      <td class="border p-2">Sekitar 5.000 m²</td>
+    </tr>
+    <tr>
+      <td class="border p-2">Fasilitas:</td>
+      <td class="border p-2 w-0">:</td>
+      <td class="border p-2">Laboratorium Komputer, Ruang Multimedia, Lapangan Basket, Kolam Renang</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+  
+
+    </main>
+  </div>
+  
+
+<footer class="bg-gray-800 text-white py-6">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+
+    <!-- Sosial Media -->
+    <div class="flex gap-4">
+      <a href="https://facebook.com" target="_blank" class="hover:text-blue-400 transition duration-200">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12a9.986 9.986 0 006.838 9.48v-6.703H6.897v-2.777h1.94V9.768c0-1.916 1.144-2.973 2.893-2.973.84 0 1.72.15 1.72.15v1.89h-.97c-.956 0-1.254.593-1.254 1.2v1.44h2.13l-.34 2.777h-1.79v6.703A9.986 9.986 0 0022 12z"/></svg>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="hover:text-pink-400 transition duration-200">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-2a1 1 0 100 2 1 1 0 000-2z"/></svg>
+      </a>
+      <a href="https://youtube.com" target="_blank" class="hover:text-red-500 transition duration-200">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.9-1.7-.9-2.1-1C16.3 4.7 12 4.7 12 4.7h-.1s-4.3 0-6.9.3c-.4.1-1.3.1-2.1 1-.6.6-.8 2-.8 2S2 9.6 2 11.1v1.8c0 1.5.2 3.1.2 3.1s.2 1.4.8 2c.8.9 1.9.9 2.4 1 1.8.2 7.6.3 7.6.3s4.3 0 6.9-.3c.4 0 1.3 0 2.1-1 .6-.6.8-2 .8-2s.2-1.6.2-3.1v-1.8c0-1.5-.2-3.1-.2-3.1zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
+      </a>
+    </div>
+
+    <!-- Hak Cipta -->
+    <div class="text-sm text-gray-300 text-center">
+      © 2025 SMK Kreatif. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
