@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test Smooth Scroll</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full bg-blue-600 text-white p-4 z-50">
+    <nav class="flex space-x-4">
+      <a href="#section1" class="bg-white text-blue-600 px-4 py-2 rounded">Profil</a>
+      <a href="#section2" class="bg-white text-blue-600 px-4 py-2 rounded">Jurusan</a>
+    </nav>
+  </header>
+
+  <!-- Spacer untuk menghindari header nutup -->
+  <div class="h-20"></div>
+
+  <!-- Section 1 -->
+  <section id="section1" class=" mt-100 scroll-mt-20 min-h-screen bg-gray-100 p-8">
+    <h2 class="text-2xl font-bold mt-100"  >Profil Section</h2>
+    <p class="">Isi dari profil SMK...</p>
+  </section>
+
+  <!-- Section 2 -->
+  <section id="section2" class="scroll-mt-20 min-h-screen bg-gray-200 p-8">
+    <h2 class="text-2xl font-bold">Jurusan Section</h2>
+    <p class="mt-4">Isi dari jurusan...</p>
+  </section>
+
+</body>
+</html>
