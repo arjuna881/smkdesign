@@ -1,0 +1,30 @@
+ <!-- tombol setting -->
+    <button id="settingsBtn" class="focus:outline-none">
+      <img src="assets/setting-4761983-3955496.png" alt="Logo SMK Kreatif"
+           class="delay-150 duration-300 ease-in-out hover:scale-110 h-10 sm:h-12 object-contain transition-all" />
+    </button>
+
+    <!-- Modal Setting -->
+<div id="settingsModal" class="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+  <div class="relative bg-white dark:bg-gray-900 p-6 rounded-lg shadow-xl w-full max-w-md text-gray-800 dark:text-gray-100">
+
+    <!-- Tombol X di pojok kanan atas dalam modal -->
+    <button id="closeSettings" class="absolute top-2 right-2 text-gray-500 hover:text-red-600 text-2xl font-bold leading-none">
+      &times;
+    </button>
+
+    <h2 class="text-xl font-bold mb-4">Pengaturan</h2>
+
+    <!-- Dark Mode Toggle -->
+    <div class="flex items-center justify-between mb-4">
+      <span class="font-medium">Mode Gelap / Terang</span>
+      <label class="inline-flex items-center cursor-pointer">
+        <input type="checkbox" id="darkToggle" class="sr-only">
+        <div class="w-11 h-6 bg-gray-300 dark:bg-gray-600 rounded-full p-1 flex items-center transition">
+          <div class="dot w-4 h-4 bg-white rounded-full shadow transform transition-transform"></div>
+        </div>
+      </label>
+    </div>
+
+  </div>
+</div>

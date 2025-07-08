@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en" class="" >
+ 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard SMK</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+   <style>
+  *, html {
+    scroll-behavior: smooth;
+  }
+  
+  </style>
+</head>
+<body class=" dark:bg-gray-900 dark:text-gray-100 bg-gray-100 flex flex-col min-h-screen"
+      style="background-image:
+        repeating-linear-gradient(to right, rgba(228, 222, 222, 0.459) 0 0,002px, transparent 5px 100px),
+        repeating-linear-gradient(to bottom, rgb(228, 222, 222, 0.459) 0,002px, transparent 5px 100px);">
+
+
+<!-- Swiper Header -->
+<header class="mt-20 relative">
+  <div class="w-full absolute top-2 left-0 px-4 z-40 space-y-4">
+
+    <!-- Swiper Teks Selamat Datang -->
+    <div class=" sliderText rounded-md overflow-hidden shadow-lg">
+      <div class="bg-gradient-to-t from-violet-300 to-sky-100 swiper-slide bg-white text-black text-center px-3 py-3 text-sm sm:text-base font-semibold overflow-hidden">
+  <div class="animate-slideText whitespace-nowrap">
+     Selamat Datang di Website Bahasa Pemrograman
+  </div>
+  
+</div>
+
+   <style>
+@keyframes slideText {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(150%); }
+}
+
+.animate-slideText {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slideText 10s linear infinite;
+}
+</style>
+
+    <!-- Swiper Gambar -->
+    <div class="swiper mySwiper  overflow-hidden shadow-md">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide bg-blue-600 text-white text-center text-sm sm:text-base">
+          <img src="assets/cowokacamata-coding.png" alt="Banner 1" class="w-full h-28 object-cover">
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide bg-green-600 text-white text-center text-sm sm:text-base">
+          <img src="assets/cowokacamata-codeing.webp" alt="Banner 2" class="w-full h-28 object-cover">
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide bg-purple-600 text-white text-center text-sm sm:text-base">
+          <img src="assets/cowo-duduk-dilaptop.jpg" alt="Banner 3" class="w-full h-28 object-cover">
+        </div>
+        <!-- Slide 4 -->
+        <div class="swiper-slide bg-indigo-600 text-white text-center text-sm sm:text-base">
+          <img src="assets/codeing.jpg" alt="Banner 4" class="w-full h-28 object-cover">
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</header>
+
+
+
+
+    <!--MAIN HEADER-->
+<header id="mainHeader"
+        class="fixed top-0 left-0 w-full z-50  text-white 
+               transition-all duration-700 ease-in-out px-4 py-1.5">
+  <div class="max-w-7xl mx-auto flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between relative">
+
+       <!-- Dark Mode Toggle -->
+<div class="  transition duration-100 delay-100 hover:scale-110 flex items-center justify-end">
+  <label for="darkToggle" class="relative inline-block w-14 h-8 cursor-pointer">
+    <input type="checkbox" id="darkToggle" class="sr-only peer">
+
+    <!-- Track -->
+    <div class=" bg-gradient-to-r from-yellow-100 to-gray-200 w-full h-full  rounded-full transition-colors duration-300"></div>
+
+    <!-- Sun Icon -->
+    <svg class="brigtness-150 absolute left-1 top-1 w-6 h-6 text-yellow-400 peer-checked:opacity-0 transition-opacity duration-300" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 4.75a.75.75 0 01.75-.75h.5a.75.75 0 010 1.5h-.5A.75.75 0 0112 4.75zM6.22 6.22a.75.75 0 011.06 0l.35.35a.75.75 0 11-1.06 1.06l-.35-.35a.75.75 0 010-1.06zM4.75 12a.75.75 0 01.75-.75v-.5a.75.75 0 011.5 0v.5a.75.75 0 01-.75.75h-.5zM6.22 17.78a.75.75 0 011.06-1.06l.35.35a.75.75 0 11-1.06 1.06l-.35-.35zM12 19.25a.75.75 0 01-.75.75h-.5a.75.75 0 010-1.5h.5a.75.75 0 01.75.75zM17.78 17.78a.75.75 0 010-1.06l.35-.35a.75.75 0 111.06 1.06l-.35.35a.75.75 0 01-1.06 0zM19.25 12a.75.75 0 01-.75.75v.5a.75.75 0 01-1.5 0v-.5a.75.75 0 01.75-.75h.5zM17.78 6.22a.75.75 0 010 1.06l-.35.35a.75.75 0 01-1.06-1.06l.35-.35a.75.75 0 011.06 0zM12 8a4 4 0 100 8 4 4 0 000-8z"/>
+    </svg>
+
+    <!-- Moon Icon -->
+    <svg class="  text-white rounded-xl absolute right-1 top-1 w-6 h-6 bg-gray-300 opacity-0 peer-checked:opacity-100 transition-opacity duration-300" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 0112.21 3 7 7 0 1012 21a9 9 0 009-8.21z"/>
+    </svg>
+
+    <!-- Dot -->
+    
+  </label>
+</div>
+
+
+ <!-- mobile Icon -->
+      <button id="navToggle" class="text-white text-3xl block md:hidden focus:outline-none">
+        &#9776;
+      </button>
+    <!-- NAV SELECTOR -->
+    <nav id="pageSelector"
+         class="hidden flex-col items-center gap-4 mt-4 px-4 md:flex md:flex-row flex justify-center flex-wrap gap-4 my-4 opacity-100 translate-y-3 transition-all duration-700">
+      <a href="#profil"
+         class="transition delay-150 duration-300 ease-in-out hover:scale-110 px-6 py-2 dark:text-white text-blue-950 rounded-lg text-sm font-semibold tracking-wide  ">
+        Home
+      </a>
+      <a href="#tentang"
+         class="transition delay-150 duration-300 ease-in-out hover:scale-110 px-6 py-2 dark:text-white text-blue-950 rounded-lg text-sm font-semibold tracking-wide  ">
+        About Us
+      </a>
+      <a href="#bahasa-pemrograman"
+         class="transition delay-150 duration-300 ease-in-out hover:scale-110 px-6 py-2 dark:text-white text-blue-950 rounded-lg text-sm font-semibold tracking-wide  ">
+        Langguage
+      </a>
+      <a href="#komunitas"
+         class="transition delay-150 duration-300 ease-in-out hover:scale-110 px-6 py-2 dark:text-white text-blue-950 rounded-lg text-sm font-semibold tracking-wide  ">
+        Komunitas
+      </a>
+      <a href="#alasan"
+         class="transition delay-150 duration-300 ease-in-out hover:scale-110 px-6 py-2 dark:text-white text-blue-950 rounded-lg text-sm font-semibold tracking-wide  ">
+        Kenapa Memilih kami
+      </a>
+      
+    </nav>
+
+    <!-- TOMBOL DAFTAR SEKARANG -->
+<div class="relative flex justify-center sm:justify-end">
+  <button id="toggleDaftar"
+          class=" delay-100 duration-100 hover:scale-95 bg-green-500 hover:bg-green-600 dark:text-white dark:bg-emerald-800 dark:brightness-150 text-gray-100/50  px-4 py-2 text-sm rounded-md  transition font-semibold">
+    Daftar Sekarang
+  </button>
+</div>
+
+      
+    </div>
+
+  </div>
+</header>
+
+
+
+
+<!-- Modal Daftar -->
+<div id="daftarModal" class="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+  <div class="relative bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl w-full max-w-md text-gray-800 ">
+
+    <!-- Tombol X -->
+    <button id="closeDaftar" class="absolute top-2 right-2 text-gray-500 hover:text-red-600 text-2xl font-bold leading-none">
+      &times;
+    </button>
+    <h2 class="text-xl font-bold mb-4">Formulir Pendaftaran</h2>
+    <form class="space-y-4">
+      <!-- Nama Lengkap -->
+      <div>
+        <label for="nama" class=" dark:text-gray-300 block font-medium mb-1">Nama Lengkap</label>
+        <input type="text" id="nama" class="w-full px-3 py-2 border rounded" placeholder="Masukkan nama anda" />
+      </div>
+      <!-- Email -->
+      <div>
+        <label for="email" class="dark:text-gray-300 block font-medium mb-1">Email</label>
+        <input type="email" id="email" class="w-full px-3 py-2 border rounded" placeholder="Masukkan email aktif" />
+      </div>
+      <!-- Username -->
+      <div>
+        <label for="username" class="dark:text-gray-300 block font-medium mb-1">Username</label>
+        <input type="text" id="username" class="w-full px-3 py-2 border rounded" placeholder="Buat username" />
+      </div>
+      <!-- Password dengan toggle -->
+      <div>
+        <label for="password" class="dark:text-gray-300 block font-medium mb-1">Password</label>
+        <div class="relative">
+          <input type="password" id="password" class="w-full px-3 py-2 border rounded pr-10" placeholder="Buat password" />
+          <button type="button" id="togglePassword" class="absolute right-2 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800">
+            <!-- Gunakan Heroicons atau Lucide (ganti sesuai kebutuhan) -->
+            <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Subscription -->
+      <div>
+        <label for="subscription" class="dark:text-gray-300 block font-medium mb-1">Pilih Paket</label>
+        <select id="subscription" class="w-full px-3 py-2 border rounded">
+          <option value="50">Rp50.000 / 1 bulan</option>
+          <option value="79">Rp79.000 / 2 bulan</option>
+          <option value="299">Rp299.000 / 5 bulan</option>
+        </select>
+      </div>
+
+      <button type="submit" class="w-full bg-green-600 hover:bg-green-500 text-white py-2 rounded font-semibold">
+        Kirim Pendaftaran
+      </button>
+    </form>
+
+  </div>
+</div>
+
+
+
+<!-- TAILWIND utility untuk nav -->
+<style>
+  .btn-nav{
+    @apply px-4 py-2 bg-white/70 text-blue-800 rounded-lg text-sm font-semibold
+           hover:bg-white/90 hover:text-blue-900 transition;
+  }
+</style>
+
+
+  <main class=" flex-1 px-4 sm:px-6 lg:px-8 py-6 max-w-8xl mx-auto  ">
+    <div></div>
+    
+  <!-- Home -->
+<section id="profil" class=" bg-gradient-to-r from-gray-200 via-sky-200/50 to-gray-50/50 dark:from-gray-800 dark:via-indigo-800/50 dark:to-gray-900 pt-40 pb-24 scroll-mt-20 mt-60 w-full text-gray-800 dark:text-gray-100">
+  <div class="max-w-screen-xl mx-auto px-6  flex flex-col md:flex-row items-center md:items-start gap-8">
+
+    <!-- Teks di kiri -->
+<div class="w-full md:w-1/2 space-y-7 -mt-6">
+  <h3 class=" mb-10 text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-purple-400 font-extrabold text-2xl sm:text-4xl uppercase italic">
+    Sekolah Bahasa Pemrograman
+  </h3>
+  <h4 class=" text-gray-900 dark:text-white font-bold text-xl sm:text-2xl leading-snug italic">
+    Belajar Koding, Bangun Masa Depan Digitalmu.
+  </h4>
+  <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed italic">
+    Kami hadir untuk mencetak talenta digital masa depan. Mulai dari HTML dasar hingga framework modern seperti React & Svelte — kurikulum kami dirancang adaptif, aplikatif, dan siap pakai untuk dunia kerja teknologi.
+  </p>
+</div>
+
+
+ 
+<!-- Gambar di kanan -->
+<div class="flex justify-center md:justify-end w-full md:w-1/2 overflow-hidden">
+  <img src="assets/cowo ngoding.png"
+     alt="Logo Sekolah Pemrograman"
+     class="brightness-75 w-[700px] max-w-full h-auto object-contain rounded-xl shadow-xl 
+            transition-all duration-300 ease-in-out 
+            hover:scale-95 hover:rounded-ss-xl" />
+
+</div>
+
+
+
+</section>
+
+<!-- Section: Tentang Sekolah -->
+<section id="tentang" class="dark:from-gray-800 dark:via-indigo-800/50 dark:to-gray-900 mt-[-50px] bg-gradient-to-t from-blue-50 via-sky-100 to-indigo-100 bg-gradient-to-r from-gray-50/50 via-white to-gray-200/50 py-20 scroll-mt-20">
+  <div class="relative pt-32">
+  <!-- Ini elemen card pojok kiri atas -->
+  <a href=""
+    id="slideBox" class=" -translate-x-10 opacity-0 transition-all delay-900 duration-900 translate-x-4 hover:scale-110 hover:translate-x-6 hover:shadow-md absolute top-0 left-0 max-w-xs bg-white dark:bg-gray-700 hover:shadow-lg transition-shadow border-l-4 border-indigo-500 p-4 rounded-lg shadow text-sm text-gray-700 dark:text-white font-medium">
+    <h3 class="text-indigo-600 dark:text-indigo-400 font-semibold mb-1">Apa Itu Sekolah Coding?</h3>
+    <p class="hover:translate-x-2 transition delay-100 duration-100 hover:scale-105">Pelajari lebih lanjut tentang misi, metode, dan keunggulan kami.</p>
+  </a>
+
+  <!-- Konten lain di dalam div ini -->
+</div>
+
+  <div class="max-w-screen-xl mx-auto px-6">
+    
+   <div class="text-center mb-16">
+  <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-700 tracking-wide uppercase">
+    Tentang Sekolah Coding
+  </h2>
+  <p class="dark:text-white mt-4 text-gray-600 text-base sm:text-lg italic leading-relaxed max-w-2xl mx-auto">
+    Sekolah Bahasa Pemrograman hadir sebagai tempat terbaik untuk menguasai skill digital masa kini.
+  </p>
+  
+</div>
+
+
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Card 1 -->
+      <div class="dark:bg-gray-700 bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 mb-3">
+          <svg class="dark:text-indigo-400 w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 20l9-5-9-5-9 5 9 5z" />
+            <path d="M12 12V4l9 5-9 5z" />
+          </svg>
+          <h4 class="dark:text-indigo-400 text-xl font-semibold text-indigo-600">Kurikulum Up-to-date</h4>
+        </div>
+        <p class="dark:text-white text-gray-700 text-sm">
+          Belajar dari materi yang selalu diperbarui sesuai kebutuhan industri — mulai dari HTML, CSS, JavaScript, hingga React dan Svelte.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="dark:bg-gray-700 bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 mb-3">
+          <svg class="dark:text-indigo-400 w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path d="M12 14v7l9-5V9" />
+            <path d="M12 14L3 9v7l9 5" />
+          </svg>
+          <h4 class="dark:text-indigo-400 text-xl font-semibold text-indigo-600">Instruktur Profesional</h4>
+        </div>
+        <p class="dark:text-white text-gray-700 text-sm">
+          Dibimbing langsung oleh praktisi industri yang berpengalaman dalam software engineering dan UI/UX design.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="dark:bg-gray-700 bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 mb-3">
+          <svg class="dark:text-indigo-400 w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M9 17v-6h6v6m2 4H7a2 2 0 01-2-2V5a2 2 0 012-2h3l2 2h6a2 2 0 012 2v14a2 2 0 01-2 2z" />
+          </svg>
+          <h4 class="dark:text-indigo-400 text-xl font-semibold text-indigo-600">Proyek Nyata</h4>
+        </div>
+        <p class="dark:text-white text-gray-700 text-sm">
+          Setiap siswa akan mengerjakan proyek seperti website portofolio, aplikasi web, dan mini game sebagai bukti kemampuan nyata.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="dark:bg-gray-700 bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 mb-3">
+          <svg class="dark:text-indigo-400 w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 8V4m0 0H8m4 0h4M5 20h14M4 4h16v16H4V4z" />
+          </svg>
+          <h4 class="dark:text-indigo-400 text-xl font-semibold text-indigo-600">Kelas Online & Offline</h4>
+        </div>
+        <p class="dark:text-white text-gray-700 text-sm">
+          Belajar fleksibel bisa dari rumah atau datang langsung ke kelas dengan fasilitas lengkap dan nyaman.
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="dark:bg-gray-700 bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 mb-3">
+          <svg class="dark:text-indigo-400 w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M17 20h5v-2a4 4 0 00-5-4m-6 6H4v-2a4 4 0 015-4m7-3a4 4 0 100-8 4 4 0 000 8z" />
+          </svg>
+          <h4 class="dark:text-indigo-400 text-xl font-semibold text-indigo-600">Komunitas Aktif</h4>
+        </div>
+        <p class="dark:text-white text-gray-700 text-sm">
+          Gabung dengan komunitas coder dari seluruh Indonesia untuk diskusi, berbagi ilmu, dan kolaborasi proyek.
+        </p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="dark:bg-gray-700 bg-gray-100 rounded-xl shadow p-6 hover:shadow-lg transition">
+        <div class="flex items-center gap-3 mb-3">
+          <svg class="dark:text-indigo-400 w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path d="M12 14v7l9-5V9" />
+            <path d="M12 14L3 9v7l9 5" />
+          </svg>
+          <h4 class="dark:text-indigo-400 text-xl font-semibold text-indigo-600">Sertifikat & Karier</h4>
+        </div>
+        <p class="dark:text-white text-gray-700 text-sm">
+          Dapatkan sertifikat dan bantuan karier untuk melamar pekerjaan di bidang teknologi atau menjadi freelance profesional.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Section: Visi & Misi -->
+<section  class="dark:from-gray-800 dark:via-indigo-800/50 dark:to-gray-900 bg-gradient-to-r from-purple-50/50 via-sky-100 to-blue-200/50 py-20 scroll-mt-20">
+  <div class="max-w-screen-xl mx-auto px-6">
+    <div class="text-center mb-16">
+  <h2 class=" text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800 tracking-wide uppercase">
+    Visi & Misi
+  </h2>
+  <div class="w-24 h-1 bg-gradient-to-r from-sky-400 to-sky-800 mx-auto mt-4 rounded-full animate-pulse"></div>
+  <p class="dark:text-white mt-6 text-gray-600 text-base sm:text-lg italic max-w-2xl mx-auto">
+    Panduan arah dan tujuan kami dalam membentuk generasi digital yang unggul dan berdampak.
+  </p>
+</div>
+
+
+    <div class="grid gap-12 md:grid-cols-2">
+      <!-- Visi -->
+      <div class="dark:bg-gray-700 transition duration-215 delay-200 hover:scale-105 bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-sky-600 mb-4 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+          </svg>
+          Visi Kami
+        </h3>
+        <p class="dark:text-white text-gray-700 text-sm leading-relaxed">
+          Menjadi platform pembelajaran teknologi digital terbaik di Indonesia yang menghasilkan talenta berkualitas dan siap bersaing di dunia industri global.
+        </p>
+      </div>
+
+      <!-- Misi -->
+      <div class="dark:bg-gray-700 transition duration-215 delay-200 hover:scale-105 bg-white p-6 rounded-xl shadow hover:shadow-md transition">
+        <h3 class="text-xl font-semibold text-blue-700 mb-4 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 12l2 2 4-4m1 8a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Misi Kami
+        </h3>
+        <ul class="dark:text-white list-disc list-inside text-gray-700 text-sm space-y-2">
+          <li>Menyediakan materi coding yang relevan & up-to-date.</li>
+          <li>Membentuk komunitas pembelajar yang saling mendukung.</li>
+          <li>Memberikan akses belajar fleksibel bagi semua kalangan.</li>
+          <li>Membantu siswa membangun portofolio dan karier di bidang teknologi.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section: Daftar Bahasa Pemrograman -->
+<section id="bahasa-pemrograman" class="dark:from-gray-800 dark:via-indigo-800/50 dark:to-gray-900 cursor-default select-none py-20 scroll-mt-20 ">
+  <div class=" rounded-xl pb-5 pt-5 shadow-md max-w-screen-xl mx-auto px-6  flex flex-col md:flex-row items-start gap-10">
+
+    <!-- Teks Keterangan di Kiri -->
+<div class="dark:bg-gray-800 pt-8 shadow-xl pb-5 rounded-xl md:w-1/3 space-y-5 px-4 sm:px-6 bg-gray-50">
+  <h2 class="transition duration-215 delay-150 hover:scale-110 hover:translate-x-7 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-blue-600 tracking-wide uppercase">
+    Bahasa Pemrograman
+  </h2>
+  <p class="dark:text-white transition duration-215 delay-200 hover:scale-105 hover:translate-x-4 text-gray-600 text-base sm:text-lg italic leading-relaxed">
+    Di sekolah ini kamu akan belajar berbagai bahasa pemrograman dari dasar hingga mahir, sesuai kebutuhan industri saat ini.
+  </p>
+  <p class="dark:text-white transition duration-215 delay-200 hover:scale-105 hover:translate-x-3  text-gray-500 text-sm leading-relaxed">
+    Semua kurikulum dirancang agar siswa siap kerja — mulai dari web development, aplikasi mobile, hingga data science dan AI.
+  </p>
+
+  <a href="langguage.html"
+   class="hover:scale-105 dark:text-white group relative inline-block mt-4 text-sm font-semibold text-indigo-600 hover:text-indigo-800 
+          transition duration-300 underline px-4 py-2 rounded-md overflow-hidden">
+  <span class="relative z-10">Baca selengkapnya →</span>
+  <span class="absolute inset-0 z-0 group-hover:rotate-2 group-hover:scale-105 transition-transform duration-300 rounded-md"></span>
+</a>
+
+</div>
+
+
+    <!-- Kartu Bahasa di Kanan -->
+<div class=" md:w-2/3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <!-- HTML & CSS -->
+  <div class="dark:brightness-50 bg-gray-50 p-5 rounded-xl shadow hover:shadow-lg transition-all text-center">
+    <div class="transition duration-215 delay-200 hover:scale-105 ">
+    <img src="assets/html-css-v2.png" alt="HTML CSS" class="w-12 h-12 mx-auto mb-3" />
+    <h3 class=" cursor-default text-xl font-bold text-indigo-600 mb-2">HTML & CSS</h3>
+    <p class=" cursor-default text-gray-700 text-sm">Dasar utama pembuatan website.</p>
+    
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <div class="dark:brightness-50 bg-gray-50 p-5 rounded-xl shadow hover:shadow-lg transition-all text-center">
+    <div class="transition duration-215 delay-200 hover:scale-105 ">
+    <img src="assets/javascript-v2.png" alt="JavaScript" class="w-12 h-12 mx-auto mb-3" />
+    <h3 class="cursor-default text-xl font-bold text-yellow-600 mb-2">JavaScript</h3>
+    <p class="cursor-default text-gray-700 text-sm">Bahasa interaktif untuk web modern.</p>
+    </div>
+  </div>
+
+  <!-- Python -->
+  <div class="dark:brightness-50 bg-gray-50 p-5 rounded-xl shadow hover:shadow-lg transition-all text-center">
+    <div class="transition duration-215 delay-200 hover:scale-105 ">
+    <img src="assets/python-v2.png" alt="Python" class="w-12 h-12 mx-auto mb-3" />
+    <h3 class="cursor-default text-xl font-bold text-green-600 mb-2">Python</h3>
+    <p class="cursor-default text-gray-700 text-sm">Untuk AI, data science, backend.</p>
+    </div>
+  </div>
+
+  <!-- PHP -->
+  <div class="dark:brightness-50 bg-gray-50 p-5 rounded-xl shadow hover:shadow-lg transition-all text-center">
+    <div class="transition duration-215 delay-200 hover:scale-105 ">
+    <img src="assets/php-v2.png" alt="PHP" class="w-12 h-12 mx-auto mb-3" />
+    <h3 class="cursor-default text-xl font-bold text-purple-600 mb-2">PHP</h3>
+    <p class="cursor-default text-gray-700 text-sm">Populer untuk web dinamis dan CMS.</p>
+    </div>
+  </div>
+
+  <!-- Java -->
+  <div class="dark:brightness-50 bg-gray-50 p-5 rounded-xl shadow hover:shadow-lg transition-all text-center">
+    <div class="transition duration-215 delay-200 hover:scale-105 ">
+    <img src="assets/java-v2.png" alt="Java" class="w-12 h-12 mx-auto mb-3" />
+    <h3 class="cursor-default text-xl font-bold text-orange-600 mb-2">Java</h3>
+    <p class=" cursor-default text-gray-700 text-sm">Digunakan di Android & sistem besar.</p>
+    </div>
+  </div>
+
+  <!-- C / C++ -->
+  <div class="dark:brightness-50 bg-gray-50 p-5 rounded-xl shadow hover:shadow-lg transition-all text-center">
+    <div class="transition duration-215 delay-200 hover:scale-105 ">
+    <img src="assets/cpp-v2.png" alt="C/C++" class="w-12 h-12 mx-auto mb-3" />
+    <h3 class="cursor-default text-xl font-bold text-blue-600 mb-2">C / C++</h3>
+    <p class="cursor-default text-gray-700 text-sm">Dasar algoritma & performa tinggi.</p>
+    </div>
+  </div>
+
+  <!-- TypeScript -->
+  <div class="dark:brightness-50 bg-gray-50 p-5 rounded-xl shadow hover:shadow-lg transition-all text-center">
+    <div class="transition duration-215 delay-200 hover:scale-105 ">
+    <img src="assets/typescript-v2.png" alt="TypeScript" class="w-12 h-12 mx-auto mb-3" />
+    <h3 class="cursor-default text-xl font-bold text-sky-600 mb-2">TypeScript</h3>
+    <p class="cursor-default text-gray-700 text-sm">JavaScript modern dengan keamanan tipe.</p>
+    </div>
+  </div>
+
+  <!-- Dart -->
+  <div class="dark:brightness-50 bg-gray-50 p-5 rounded-xl shadow hover:shadow-lg transition-all text-center">
+    <div class="transition duration-215 delay-200 hover:scale-105 ">
+    <img src="assets/dart-v2.png" alt="Dart" class="w-12 h-12 mx-auto mb-3" />
+    <h3 class="cursor-default text-xl font-bold text-cyan-700 mb-2">Dart</h3>
+    <p class="cursor-default text-gray-700 text-sm">Digunakan untuk aplikasi Flutter.</p>
+    </div>
+  </div>
+
+  <!-- Go -->
+  <div class="dark:brightness-50 bg-gray-50 p-5 rounded-xl shadow hover:shadow-lg transition-all text-center">
+    <div class="transition duration-215 delay-200 hover:scale-105 ">
+    <img src="assets/go-v2.png" alt="Go" class="w-12 h-12 mx-auto mb-3" />
+    <h3 class="cursor-default text-xl font-bold text-blue-500 mb-2">Go</h3>
+    <p class="cursor-default text-gray-700 text-sm">Bahasa backend modern yang cepat.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- Section: Komunitas -->
+<section id="komunitas" class="dark:from-gray-800 dark:via-indigo-800/50 dark:to-gray-900 cursor-default select-none bg-gradient-to-r from-sky-50/50 via-violet-100 to-indigo-200/50 py-20 scroll-mt-20">
+  <div class="max-w-screen-xl mx-auto px-6">
+    <div class="text-center mb-14">
+  <h2 class=" text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-700 tracking-wide uppercase">
+    Komunitas Sekolah Coding
+  </h2>
+  <p class="dark:text-white mt-4 text-gray-600 text-base sm:text-lg italic leading-relaxed max-w-2xl mx-auto">
+    Bergabunglah dengan komunitas pembelajar, mentor, dan profesional yang siap mendukung perjalanan coding-mu.
+  </p>
+</div>
+
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Card: Discord -->
+     <div class="dark:bg-gray-700 backdrop-blur-md bg-white/30 border border-white/40 rounded-xl shadow-md hover:shadow-xl transition-all p-6 text-center">
+    <img src="assets/discord-logo.png" alt="Discord" class="transition delay-150 duration-300 ease-in-out hover:scale-125 w-20 h-20 mx-auto mb-4" />
+    <div class="transition duration-100 delay-100 hover:scale-110">
+    <h3 class=" text-lg font-bold text-indigo-600 mb-2">Server Discord</h3>
+    <p class="dark:text-white text-gray-700 text-sm mb-4">
+      Tempat diskusi harian, tanya jawab langsung dengan mentor, dan update event coding seru.
+    </p>
+    </div>
+    <a href="https://discord.gg/PdsxCTtB" target="_blank" class="dark:text-indigo-400 text-indigo-700 font-semibold hover:underline">
+      Gabung Sekarang &rarr;
+    </a>
+  </div>
+
+      <!-- Card: Forum -->
+<div class="dark:bg-gray-700 backdrop-blur-md bg-white/30 border border-white/40 rounded-xl shadow-md hover:shadow-xl transition-all p-8 text-center">
+  <img src="assets/forum-diskusi.png" alt="Forum" class="transition delay-150 duration-300 ease-in-out hover:scale-125 w-16 h-16 mx-auto mb-4" />
+  <div class="transition duration-100 delay-100 hover:scale-110">
+  <h3 class="text-lg font-bold text-indigo-600 mb-2">Forum Diskusi</h3>
+  <p class="dark:text-white text-gray-700 text-sm mb-6">
+    Tanya, jawab, dan berbagi ilmu lewat forum coding kami yang ramah dan suportif.
+  </p>
+  </div>
+  <a href="#komunitas" onclick="alert('Error we could find the page')" class="dark:text-indigo-400 text-indigo-700 font-semibold hover:underline">
+    Kunjungi Forum &rarr;
+  </a>
+</div>
+
+      <!-- Card: Event & Challenge -->
+      <div class="dark:bg-gray-700 backdrop-blur-md bg-white/30 border border-white/40 rounded-xl shadow-md hover:shadow-xl transition-all p-6 text-center">
+        <img src="assets/event-coding.png" alt="Event Coding" class="transition delay-150 duration-300 ease-in-out hover:scale-125 w-16 h-16 mx-auto mb-4" />
+        <div class="transition duration-100 delay-100 hover:scale-110">
+        <h3 class="text-lg font-bold text-indigo-600 mb-2">Event & Coding Challenge</h3>
+        <p class=" dark:text-white text-gray-700 text-sm mb-8">
+          Ikuti tantangan coding mingguan, webinar, dan mini project bareng komunitas dari seluruh Indonesia.
+        </p>
+        </div>
+        <a href="event.html"
+   class=" dark:text-indigo-400 text-indigo-700 font-semibold hover:underline">
+  Lihat Jadwal &rarr;
+</a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section: Kenapa Memilih Kami -->
+<section id="alasan" class="dark:from-gray-800 dark:via-indigo-800/50 dark:to-gray-900 backdrop-blur-sm py-20 scroll-mt-20">
+  <div class="max-w-screen-xl mx-auto px-6">
+    <div class="text-center mb-16">
+  <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-400 uppercase tracking-wide">
+    Kenapa Memilih Kami
+  </h2>
+  <p class="dark:text-white mt-4 text-gray-600 text-base sm:text-lg italic leading-relaxed">
+    Lebih dari sekadar tempat belajar — kami adalah ekosistem pembelajaran modern yang adaptif, terhubung dengan industri, dan siap mengantar kamu menjadi talenta digital unggulan.
+  </p>
+</div>
+
+
+    <div class="flex flex-col lg:flex-row gap-12 items-start">
+
+      <!-- Kolom Kiri: Ulasan -->
+      <div class="pointer-events-none lg:w-1/2 space-y-6">
+
+        <!-- Ulasan Teratas -->
+        <div class="dark:bg-gray-700 bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-xl shadow-md relative">
+          <span class="absolute -top-3 -left-3 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full">TOP REVIEW ⭐</span>
+          <p class="dark:text-white text-gray-800 text-base italic">“Platform ini bukan cuma ngajarin ngoding, tapi juga membentuk mindset problem solving. Materinya terstruktur dan praktis, saya langsung dapet project freelance setelah ikut kelas React!”</p>
+          <div class="mt-4 flex items-center gap-3">
+            <img src="https://i.pravatar.cc/40?img=1" alt="User" class="w-10 h-10 rounded-full">
+            <div>
+              <p class="dark:text-blue-700 text-sm font-semibold text-yellow-600">Dimas Ananta</p>
+              <p class="dark:text-gray-100 text-xs text-gray-500">Freelancer Web Dev</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ulasan 2 -->
+        <div class="dark:bg-gray-700 bg-white p-6 rounded-xl shadow-md">
+          <p class="dark:text-white text-gray-700 text-base italic">“Belajar di Sekolah Coding bikin aku yang awalnya awam banget jadi ngerti HTML, CSS, dan JavaScript. Mentornya responsif dan komunitasnya aktif banget. Worth it!”</p>
+          <div class="mt-4 flex items-center gap-3">
+            <img src="https://i.pravatar.cc/40?img=5" alt="User" class="w-10 h-10 rounded-full">
+            <div>
+              <p class="dark:text-blue-700 text-sm font-semibold text-blue-800">Salsabila Rahma</p>
+              <p class="dark:text-gray-100 text-xs text-gray-500">Mahasiswa - Bandung</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ulasan 3 -->
+        <div class="dark:bg-gray-700 bg-white p-6 rounded-xl shadow-md">
+          <p class="dark:text-white text-gray-700 text-base italic">“Saya ikut kelas front-end dan sekarang sudah kerja remote di startup luar negeri. Terima kasih Sekolah Coding atas kurikulum dan proyek nyatanya!”</p>
+          <div class="mt-4 flex items-center gap-3">
+            <img src="https://i.pravatar.cc/40?img=8" alt="User" class="w-10 h-10 rounded-full">
+            <div>
+              <p class="dark:text-blue-700 text-sm font-semibold text-blue-800">Fajar Nugraha</p>
+              <p class="dark:text-gray-100 text-xs text-gray-500">Fresh Graduate - Surabaya</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Kolom Kanan: Card Alasan -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full lg:w-1/2">
+
+        <!-- Card 1 -->
+        <div class="dark:bg-gray-700 bg-gray-50 p-4 rounded-lg shadow-md text-center w-full">
+          <div class="flex justify-center mb-2">
+            <svg class="dark:text-teal-300 w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M12 4v16m0 0H3m9 0h9" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="dark:text-teal-300 text-lg font-bold text-teal-700 mb-1">Kurikulum Update</h3>
+          <p class="dark:text-white text-sm text-gray-800">Materi mengikuti tren teknologi terbaru.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="dark:bg-gray-700 bg-gray-50 p-4 rounded-lg shadow-md text-center w-full">
+          <div class="flex justify-center mb-2">
+            <svg class="dark:text-teal-300 w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M5.5 19a6.5 6.5 0 0 1 13 0M12 14a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+            </svg>
+          </div>
+          <h3 class="dark:text-teal-300 text-lg font-bold text-teal-700 mb-1">Mentor Profesional</h3>
+          <p class="dark:text-white text-sm text-gray-800">Belajar dari praktisi industri ternama.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="dark:bg-gray-700 bg-gray-50 p-4 rounded-lg shadow-md text-center w-full">
+          <div class="flex justify-center mb-2">
+            <svg class="dark:text-teal-300 w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M17 20h5v-2a4 4 0 0 0-5-4M9 20H4v-2a4 4 0 0 1 5-4m7-3a4 4 0 1 0-8 0 4 4 0 0 0 8 0z" />
+            </svg>
+          </div>
+          <h3 class="dark:text-teal-300 text-lg font-bold text-teal-700 mb-1">Komunitas Aktif</h3>
+          <p class="dark:text-white text-sm text-gray-800">Networking dan support antar coder.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="dark:bg-gray-700 bg-gray-50 p-4 rounded-lg shadow-md text-center w-full">
+          <div class="flex justify-center mb-2">
+            <svg class="dark:text-teal-300 w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M3 12l18-6-6 18-2.5-8.5L3 12z" />
+            </svg>
+          </div>
+          <h3 class="dark:text-teal-300 text-lg font-bold text-teal-700 mb-1">Akses Fleksibel</h3>
+          <p class="dark:text-white text-sm text-gray-800">Bebas belajar kapan saja.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="dark:bg-gray-700 bg-gray-50 p-4 rounded-lg shadow-md text-center w-full">
+          <div class="flex justify-center mb-2">
+            <svg class="dark:text-teal-300 w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M9 12l2 2 4-4M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
+            </svg>
+          </div>
+          <h3 class="dark:text-teal-300 text-lg font-bold text-teal-700 mb-1">Portofolio & Sertifikat</h3>
+          <p class="dark:text-white text-sm text-gray-800">Sertifikasi + pengalaman real.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="dark:bg-gray-700 bg-gray-50 p-4 rounded-lg shadow-md text-center w-full">
+          <div class="flex justify-center mb-2">
+            <svg class="dark:text-teal-300 w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M12 4.354a4.375 4.375 0 1 1 0 8.75 4.375 4.375 0 0 1 0-8.75zM3 20h18v-2a6 6 0 0 0-6-6H9a6 6 0 0 0-6 6v2z" />
+            </svg>
+          </div>
+          <h3 class="dark:text-teal-300 text-lg font-bold text-teal-700 mb-1">Terbukti Berkualitas</h3>
+          <p class="dark:text-white text-sm text-gray-800">Ribuan alumni sukses dan puas.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Section: Kolaborasi -->
+<section id="kolaborasi" class="dark:from-gray-800 dark:via-indigo-800/50 dark:to-gray-900 py-20 bg-gradient-to-br from-white via-blue-50/50 to-indigo-100">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-10">
+    
+<div class="md:w-1/2 space-y-6">
+  <h2 class="text-4xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-700 via-purple-500 to-indigo-900 uppercase tracking-wide">
+    Kolaborasi & Partner
+  </h2>
+  
+  <p class="dark:text-white text-gray-700 text-base sm:text-lg leading-relaxed italic">
+    Kami menjalin kemitraan strategis dengan berbagai startup, perusahaan teknologi, dan komunitas belajar digital di Indonesia.
+  </p>
+  
+  <p class="dark:text-white text-gray-600 text-sm sm:text-base leading-relaxed">
+    Lewat kolaborasi ini, kami menghadirkan kurikulum yang relevan, sesi mentoring bersama praktisi industri, serta program pengembangan karier untuk semua siswa.
+  </p>
+
+  <a href="#masukan" class="inline-block px-6 py-3 bg-gradient-to-r from-indigo-700 to-purple-700 text-white font-semibold rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition duration-300">
+    Hubungi Kami →
+  </a>
+</div>
+
+
+    <!-- Logo Partner di kanan -->
+    <div class="md:w-1/2 grid grid-cols-2 sm:grid-cols-3 gap-6">
+      <!-- Partner Card -->
+      <div class="bg-white/30 backdrop-blur-lg border border-white/40 rounded-xl p-4 shadow hover:shadow-lg transition">
+        <img src="assets/tokopedia-logo.png" alt="Tokopedia" class="h-12 mx-auto" />
+      </div>
+      <div class="bg-white/30 backdrop-blur-lg border border-white/40 rounded-xl p-4 shadow hover:shadow-lg transition">
+        <img src="assets/kompas-logo.png" alt="Gojek" class="h-12 mx-auto" />
+      </div>
+      <div class="bg-white/30 backdrop-blur-lg border border-white/40 rounded-xl p-4 shadow hover:shadow-lg transition">
+        <img src="assets/binaracademy.png" alt="Binar Academy" class="h-12 mx-auto" />
+      </div>
+      <!--between atas bawah card-->
+      <div class="bg-white/30 backdrop-blur-lg border border-white/40 rounded-xl p-4 shadow hover:shadow-lg transition">
+        <img src="assets/dicoding-logo.png" alt="Dicoding" class="h-12 mx-auto" />
+      </div>
+      <div class="bg-white/30 backdrop-blur-lg border border-white/40 rounded-xl p-4 shadow hover:shadow-lg transition">
+        <img src="assets/kampusmerdeka-logo.png" alt="Kampus Merdeka" class="h-12 mx-auto" />
+      </div>
+      <div class="bg-white/30 backdrop-blur-lg border border-white/40 rounded-xl p-4 shadow hover:shadow-lg transition">
+        <img src="assets/hacktiv8-logo.png" alt="Hacktiv8" class="h-12 mx-auto" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+ 
+
+  </main>
+
+  <!-- Footer -->
+<footer class="bg-gray-800 text-white w-full">
+
+<section class="pt-5 bg-white ">
+  <div class=" text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-indigo-800 uppercase">Hubungi Kami</h2>
+      <p class=" mt-3 text-gray-600 text-base sm:text-lg italic max-w-2xl mx-auto">
+        Ada pertanyaan, kerjasama, atau masukan? Kami siap membantu.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+     <!-- Section: Berikan Masukan (Minimalis & Collapse Style) -->
+<section id="masukan" class="bg-gray-100 bg-gradient-to-br from-white to-green-50  scroll-mt-20 shadow-xl ">
+  <div class="max-w-4xl mx-auto px-20">
+
+    <div class="w-full h-96 rounded-xl overflow-hidden shadow-lg">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.6847991841005!2d106.78804217418536!3d-6.561412993431748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c46c705c2fc1%3A0x4dccf09a154d547a!2sPlaza%20Indah%20Bogor%20%2F%20PT.%20Binapapan%20Perkasa!5e0!3m2!1sid!2sid!4v1751959820893!5m2!1sid!2sid"
+   width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+    
+</section>
+
+      <!-- INFO KONTAK DENGAN ICON -->
+<div class="space-y-6 text-gray-800 text-sm font-medium">
+
+  <!-- Judul -->
+  <h2 class="text-xl font-bold text-black">Informasi Kontak</h2>
+
+  <!-- Alamat -->
+  <div class="flex items-start gap-4">
+    <div class="w-7 h-7 flex items-center justify-center bg-green-100 rounded-full">
+      <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5z" />
+      </svg>
+    </div>
+    <div>
+      <p class="font-bold">Alamat</p>
+      <p>Plaza Indah Bogor B-2<br>Jl. K. H. Sholeh Iskandar, Kedungbadak, Kota Bogor 16164</p>
+    </div>
+  </div>
+
+  <!-- Email -->
+  <div class="flex items-start gap-4">
+    <div class="w-7 h-7 flex items-center justify-center bg-green-100 rounded-full">
+     <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" stroke-width="2"
+     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3 8l9 6 9-6M4 6h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z" />
+</svg>
+
+    </div>
+    <div>
+      <p class="font-bold">Email</p>
+      <p>info@website.com</p>
+    </div>
+  </div>
+
+  <!-- Telepon -->
+  <div class="flex items-start gap-4">
+    <div class="w-7 h-7 flex items-center justify-center bg-green-100 rounded-full">
+      <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.11-.21 11.72 11.72 0 003.69.6 1 1 0 011 1V20a1 1 0 01-1 1C9.39 21 3 14.61 3 7a1 1 0 011-1h3.5a1 1 0 011 1c0 1.29.21 2.56.62 3.79a1.003 1.003 0 01-.21 1.11l-2.2 2.2z" />
+      </svg>
+    </div>
+    <div>
+      <p class="font-bold">Telepon</p>
+      <p>0200-9877988</p>
+    </div>
+  </div>
+
+  <!-- WhatsApp CS -->
+  <div class="flex items-start gap-4">
+    <div class="w-7 h-7 flex items-center justify-center bg-green-100 rounded-full">
+      <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M20.52 3.48A11.87 11.87 0 0012 0C5.37 0 0 5.37 0 12a11.85 11.85 0 001.63 6.09L0 24l5.91-1.63A11.85 11.85 0 0012 24c6.63 0 12-5.37 12-12a11.87 11.87 0 00-3.48-8.52zM12 21.5a9.44 9.44 0 01-5-1.39l-.36-.21-3.5.96.94-3.42-.23-.35a9.44 9.44 0 1117.39-5.59A9.45 9.45 0 0112 21.5zm4.26-6.5c-.24-.12-1.42-.7-1.64-.77s-.38-.12-.54.12-.62.77-.76.93-.28.17-.52.06a7.67 7.67 0 01-2.25-1.39 8.49 8.49 0 01-1.57-1.96c-.16-.27 0-.41.12-.53.12-.12.27-.3.4-.45s.17-.25.25-.41.04-.31-.02-.43-.54-1.3-.74-1.78c-.2-.48-.4-.41-.54-.42s-.3-.02-.46-.02a.89.89 0 00-.66.31 2.72 2.72 0 00-.86 2.02c0 1.18.85 2.33.97 2.49.12.16 1.68 2.56 4.06 3.59.57.25 1.01.39 1.35.5a3.24 3.24 0 001.49.09c.45-.07 1.42-.58 1.62-1.14s.2-1.05.14-1.14-.22-.17-.46-.29z" />
+      </svg>
+    </div>
+    <div>
+      <p class="font-bold">WhatsApp CS</p>
+      <p>+6212345678901</p>
+    </div>
+  </div>
+
+  <!-- Website -->
+  <div class="flex items-start gap-4">
+    <div class="w-7 h-7 flex items-center justify-center bg-green-100 rounded-full">
+      <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" stroke-width="2"
+     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round"
+        d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 0c2.5 2.5 2.5 15.5 0 18m0-18c-2.5 2.5-2.5 15.5 0 18M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/>
+</svg>
+
+    </div>
+    <div>
+      <p class="font-bold">Website</p>
+      <p>www.id</p>
+    </div>
+  </div>
+
+</div>
+
+
+        
+
+</section>
+
+  <div class="pt-2 max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col items-center text-center space-y-4">
+
+    <!-- Social Media Icons -->
+    <div class=" flex gap-6 justify-center">
+      <a href="https://facebook.com" target="_blank" class="hover:text-blue-400" aria-label="Facebook">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523..." /></svg>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="hover:text-pink-400" aria-label="Instagram">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M7 2C4.243..." /></svg>
+      </a>
+      <a href="https://youtube.com" target="_blank" class="hover:text-red-500" aria-label="YouTube">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M21.8 8s..." /></svg>
+      </a>
+    </div>
+
+    <!-- Copyright -->
+    <p class="text-sm text-gray-300 leading-relaxed px-4">
+      &copy; 2025 <span class="font-semibold">SMK Kreatif</span>. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+
+<script>
+
+
+
+
+const header      = document.getElementById('mainHeader');
+const selector    = document.getElementById('pageSelector');
+const centerTitle = document.getElementById('centerTitle');
+
+const toggleDaftarBtn = document.getElementById('toggleDaftar');
+const daftarInfo = document.getElementById('daftar-info');
+
+if (toggleDaftarBtn && daftarInfo) {
+  toggleDaftarBtn.addEventListener('click', () => {
+    daftarInfo.classList.toggle('hidden');
+  });
+}
+
+
+// Scroll behaviour
+window.addEventListener('scroll', () => {
+  const top = window.scrollY < 30;
+   const navToggle = document.getElementById('navToggle');
+
+  if (header) {
+    header.classList.toggle('bg-white/0',  top);
+    header.classList.toggle('text-white',  top);
+    header.classList.toggle('py-1.5',        top);
+     header.classList.toggle('dark:bg-blue-600/75', !top);
+    header.classList.toggle('bg-white', !top);
+    header.classList.toggle('text-white',     !top);
+    header.classList.toggle('py-0.4',          !top);
+    header.classList.toggle('shadow-xl',       !top);
+     header.classList.toggle('backdrop-blur-xl',       !top);
+  }
+
+  if (selector) {
+    
+    selector.classList.add('opacity-100', 'translate-y-0');
+    selector.classList.remove('opacity-0', 'translate-y-1');
+  }
+
+  if (centerTitle) {
+    centerTitle.style.opacity = top ? 1 : 0;
+  }
+});
+ navToggle.addEventListener('click', () => {
+  
+    pageSelector.classList.toggle('hidden');
+    pageSelector.classList.toggle('opacity-0');
+    pageSelector.classList.toggle('translate-y-3');
+    pageSelector.classList.toggle('opacity-100');
+    pageSelector.classList.toggle('-translate-y-0');
+  });
+
+
+const toggle = document.getElementById('darkToggle');
+const html = document.documentElement; // ambil elemen <html>
+
+document.addEventListener('DOMContentLoaded', () => {
+  const theme = localStorage.getItem('theme');
+
+  // Tambahkan fallback jika belum ada nilai theme
+  if (!theme) {
+    localStorage.setItem('theme', 'light');
+  }
+
+  if (theme === 'dark') {
+    html.classList.add('dark');
+    toggle.checked = true;
+  } else {
+    html.classList.remove('dark');
+    toggle.checked = false;
+  }
+    const el = document.getElementById('slideBox');
+    el.classList.remove('opacity-0', '-translate-x-10');
+    el.classList.add('opacity-100', 'translate-x-0');
+});
+
+// Saat toggle diubah
+toggle.addEventListener('change', () => {
+  if (toggle.checked) {
+    html.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    html.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+
+    const isDark = toggle.checked;
+    document.documentElement.classList.toggle('dark', isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }
+});
+
+  
+
+const daftarBtn     = document.getElementById('toggleDaftar');
+const daftarModal   = document.getElementById('daftarModal');
+const closeDaftar   = document.getElementById('closeDaftar');
+
+if (daftarBtn && daftarModal && closeDaftar) {
+  daftarBtn.addEventListener('click', () => daftarModal.classList.remove('hidden'));
+  closeDaftar.addEventListener('click', () => daftarModal.classList.add('hidden'));
+
+  daftarModal.addEventListener('click', (e) => {
+    if (e.target === daftarModal) daftarModal.classList.add('hidden');
+  });
+}
+
+// toogle password
+const passwordInput = document.getElementById("password");
+  const togglePassword = document.getElementById("togglePassword");
+  const eyeIcon = document.getElementById("eyeIcon");
+
+  let isVisible = false;
+
+  togglePassword.addEventListener("click", () => {
+    isVisible = !isVisible;
+    passwordInput.type = isVisible ? "text" : "password";
+
+    // Ganti ikon antara eye dan eye-off
+    eyeIcon.innerHTML = isVisible
+      ? `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+               d="M13.875 18.825A10.05 10.05 0 0112 19c-4.477 0-8.268-2.943-9.542-7a9.969 9.969 0 012.293-3.95M6.219 6.219a9.953 9.953 0 014.781-1.219c4.478 0 8.268 2.943 9.542 7a9.97 9.97 0 01-1.249 2.592M9.88 9.88a3 3 0 104.24 4.24" />
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+               d="M3 3l18 18" />`
+      : `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+               d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+               d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />`;
+  });
+
+tailwind.config = {
+    darkMode: 'class',
+  }  
+
+
+  function toggleMasukanForm() {
+    const form = document.getElementById("masukanForm");
+    form.classList.toggle("max-h-0");
+    form.classList.toggle("max-h-[1000px]");
+  }
+  
+</script>
+
+ 
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    
+    slidesPerView: 1,
+    spaceBetween: 12,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    speed: 500,
+    grabCursor: true,
+  });
+ 
+</script>
+
+  <script>
+  const swiperAtas = new Swiper('.swiperAtas', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    speed: 3000,
+  });
+
+  const swiperBawah = new Swiper('.swiperBawah', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      reverseDirection: true, // arah kiri
+    },
+    speed: 3000,
+  });
+</script>
+
+</body>
+
+</html>
